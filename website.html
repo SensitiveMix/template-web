@@ -51,7 +51,6 @@
     <meta class="foundation-mq-small">
 </head>
 <body style="background-color:#161616;" class="page-home">
-
 <script>
     //    [siteTypeLevel1]/[siteTypeLevel2]/[siteOwner]/[siteTarget]/[siteFamily]/[code-gabarit]/[mobile-desktop]//[pagetitle]
     var dataLayer = [{
@@ -75,7 +74,6 @@
     &lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-MMMN4L" height="0" width="0"
     style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;
 </noscript>
-
 <script type="text/javascript">/*&lt;![CDATA[*/
 (function (w, d, s, l, i) {
     w[l] = w[l] || [];
@@ -87,13 +85,29 @@
 })(window, document, 'script', 'dataLayer', 'GTM-MMMN4L');
 /*]]&gt;*/</script>
 <!-- End Google Tag Manager PSA_GTM_v2 -->
-<!--Main content-->
+
+<!--第二帧内容页-->
 <div id="app">
+    <!--第三帧文字加载。第四帧文字加载-->
     <div id="page" class="loaded">
         <div id="main" class="main">
 
             <div id="three-container" style="z-index: 0; display: block; opacity: 1;">
-                <!--<canvas width="1920" height="94" style="width: 1920px; height: 94px;"></canvas>-->
+
+            </div>
+
+            <div id="fisrtFade" style="text-align: center">
+                <div class="content-wrap first">
+                    <span class="one">有能力,有信心,有决心</span><br/><br/><br/>
+                    <span class="two">为投资者创造新价值</span>
+                </div>
+            </div>
+
+            <div id="secondFade" style="text-align: center">
+                <div class="content-wrap second">
+                    <span class="one">专业 专注的工作准则</span><br/><br/><br/>
+                    <span class="two">合作 共赢的工作理念</span>
+                </div>
             </div>
 
             <!--签名相关-->
@@ -138,6 +152,7 @@
 
         </div>
     </div>
+    <!--主体内容-->
     <div id="content">
         <!--banner-->
         <div class="banner">
@@ -156,7 +171,7 @@
                     阅沃实业致力于打造业内业一流的贵金属现货投资服务平台，通过一整套的客户服务体系，为广大投资者提供集“投资分析、交易指导、研究创新”等综合性的专业贵金属投资服务。具备实时性与及时性兼备的综合金融数据，有为投资者创造价值的如同璀璨的星星一般的永恒的心。<br>公司总部位于上海，法人治理结构规范，股东背景实力雄厚。主要涉及业务范围为：贵金属、原油、邮币卡、在线金融教育等。集团拥有优质的专家团队，尤其针对大宗商品的现货、OTC、邮币卡等相关领域，具备国内外知名企业管理经验，在管理、风控、运营等相关领域拥有深厚造诣和独特优势。目前分公司位于上海、武汉、深圳。
                 </p>
             </div>
-            <div class="rgt"><img src="images/profile-pic03.jpg"/></div>
+            <div class="rgt"></div>
         </div>
         <!--elite-->
         <div class="elite w1200">
@@ -207,7 +222,10 @@
 
                     <p>阅沃实业的目标是让客户的投资品种更丰富，财富稳步升值。这是阅沃实业的文化，我们有能力、有信心、有恒心，为投资者创造价值。</p>
                 </div>
-                <div class="rgt"><img src="images/video-pic02.jpg"/></div>
+                <div class="rgt">
+                    <video width="600" height="420" controls=""><source src="video/company_intro.mp4" type="video/mp4">
+                        Your browser does not support the video tag.</video>
+                </div>
             </div>
         </div>
         <!--expand-->
@@ -339,18 +357,17 @@
         </div>
     </div>
 </div>
-
+<!--加载-->
 <div id="preloader">
     <div class="loader"></div>
     <div class="background"></div>
 </div>
-
+<!--图片加载-->
 <img style="display: none;" id="yw_logo_img" alt="DS" src="images/yw_logo_img.jpg">
 <img style="display: none;" id="sa_logo_img" alt="DS" src="images/logo_sa_lijn.jpg">
 <img style="display: none;" id="sa_logo_gp_img" alt="DS" src="images/logo_sa_gp.jpg">
 <img style="display: none;" id="sa_logo_lt_img" alt="DS" src="images/logo_sa_last.jpg">
 <img style="display: none;" id="not_found_img" alt="DS" src="images/404.png">
-
 <!--初始文字 确认显示的顺序-->
 <script type="text/template" id="tpl-intro">
     <section id="intro">
@@ -402,104 +419,13 @@
 
     </section>
 </script>
-<!--创建签名模块-->
+<!--内容页-->
 <script type="text/template" id="tpl-connect">
-    <div id="connect-signature">
-        <div class="content-wrap" style="font-size: 44px;margin: 0 auto;margin-top: 200px;padding: 10px;">
-            <style>
-                .content-wrap > span {
-                    margin-top: 10px
-                }
-            </style>
-            <span>自我提升，良性竞争，相互欣赏，相互支持</span><br/><br/><br/>
+    <div id="connect-signature" style="text-align: center">
+        <div class="content-wrap third" style="font-size: 47px;font-family:'Microsoft YaHei';width:100%;margin:14.5% auto;padding: 20px;">
+            <span>自我提升，良性竞争，相互欣赏，相互支持</span><br/><br/><br/><br/><br/>
             <span>立足新起点，开创新局面</span>
         </div>
-        <!--&lt;!&ndash;<div class="content">&ndash;&gt;-->
-
-        <!--<h1>Create your signature</h1>-->
-
-        <!--<p>-->
-        <!--Voor de optimale beleving cre&euml;ert u uw handtekening via uw smartphone. Ga op uw smartphone-->
-        <!--naar:</p>-->
-
-        <!--<div class="url">-->
-        <!--<span class="label">-->
-        <!--http://sig.ink                </span>-->
-        <!--<span class="bg">-->
-        <!--<span class="top"></span>-->
-        <!--<span class="right"></span>-->
-        <!--<span class="bottom"></span>-->
-        <!--<span class="left"></span>-->
-        <!--</span>-->
-        <!--</div>-->
-        <!--<p>-->
-        <!--en vul deze code in om te verbinden </p>-->
-
-        <!--<div id="number-holder">-->
-        <!--<span class="digit nr1">-->
-        <!--<span class="label">-->
-        <!--</span>-->
-        <!--<span class="bg">-->
-        <!--<span class="top"></span>-->
-        <!--<span class="right"></span>-->
-        <!--<span class="bottom"></span>-->
-        <!--<span class="left"></span>-->
-        <!--</span>-->
-        <!--</span>-->
-        <!--<span class="digit nr2">-->
-        <!--<span class="label">-->
-        <!--</span>-->
-        <!--<span class="bg">-->
-        <!--<span class="top"></span>-->
-        <!--<span class="right"></span>-->
-        <!--<span class="bottom"></span>-->
-        <!--<span class="left"></span>-->
-        <!--</span>-->
-        <!--</span>-->
-        <!--<span class="digit nr3">-->
-        <!--<span class="label">-->
-        <!--</span>-->
-        <!--<span class="bg">-->
-        <!--<span class="top"></span>-->
-        <!--<span class="right"></span>-->
-        <!--<span class="bottom"></span>-->
-        <!--<span class="left"></span>-->
-        <!--</span>-->
-        <!--</span>-->
-        <!--<span class="digit nr4">-->
-        <!--<span class="label">-->
-        <!--</span>-->
-        <!--<span class="bg">-->
-        <!--<span class="top"></span>-->
-        <!--<span class="right"></span>-->
-        <!--<span class="bottom"></span>-->
-        <!--<span class="left"></span>-->
-        <!--</span>-->
-        <!--</span>-->
-        <!--</div>-->
-
-        <!--<a href="#/sign" class="button">-->
-        <!--<span class="inner">Cre&euml;er uw handtekening zonder smartphone</span>-->
-        <!--<span class="bg">-->
-        <!--<span class="top"></span>-->
-        <!--<span class="right"></span>-->
-        <!--<span class="bottom"></span>-->
-        <!--<span class="left"></span>-->
-        <!--</span>-->
-        <!--</a>-->
-
-    </div>
-
-    <!--<span class="background">-->
-    <!--<span class="bg">-->
-    <!--<span class="top"></span>-->
-    <!--<span class="right"></span>-->
-    <!--<span class="bottom"></span>-->
-    <!--<span class="left"></span>-->
-    <!--</span>-->
-    <!--</span>-->
-
-    <!--</div>-->
     </div>
 </script>
 <!---->

@@ -34,15 +34,15 @@ p, .profile p, .elite ul li p strong, .video *, .expand-ul h2 a, .recruit ul li 
 .video > div{height:312px; width:1200px; margin:0 auto;}
 .video .lft{ width:345px; padding:32px 0 0 50px;font:14px/24px "Microsoft YaHei";}
 .video .lft span{ font-size:16px; display:block; padding:20px 0 30px;}
-.video .rgt{ width:752px; height:422px; margin-top:-60px; position:relative;}
+.video .rgt{ margin-top:-60px; position:relative;}
 /*expand*/
 .expand{ margin:152px auto 90px;}
 .expand > img{ display:block; margin:0 auto 40px;}
-.expand-ul > li{ width:580px; float:left; height:445px; margin:0 40px 0 0;}
+.expand-ul > li{ width:580px; float:left; height:458px; margin:0 40px 0 0;}
 .expand-ul > li div{ width:580px; height:306px;}
 .expand-ul > li div img{ display:block;}
-.expand-ul h2{ height:64px; background:url(../images/expand-pic02.jpg) no-repeat left top #1d1e23;padding:15px 0 0 100px;}
-.expand-ul h2 a{font:18px/30px "Microsoft YaHei"; display:block;}
+.expand-ul h2{ height:72px; background:url(../images/expand-pic02.jpg) no-repeat left top #1d1e23;padding:15px 0 0 100px;}
+.expand-ul h2 a{font:18px/26px "Microsoft YaHei"; display:block;}
 .expand-ul h2 span{font:12px/30px "Microsoft YaHei"; color:#999999; padding-right:18px;}
 .expand-ul h2 span img{ vertical-align:middle; padding-right:8px;}
 .expand-ul p{font:14px/20px "Microsoft YaHei"; color:#666666; padding-top:12px;}
@@ -57,8 +57,8 @@ p, .profile p, .elite ul li p strong, .video *, .expand-ul h2 a, .recruit ul li 
 #swihRightDiv{width:58px;height:58px; position:absolute;top:100px;right:0; }  
 /*图片*/
 imgListUl.Img{height:306px;width:580px;} 
-#imgListUl{ width:2900px;}
-#imgListUl li{ float:left;} 
+#imgListUl{ width:2900px;padding-left:0;}
+#imgListUl li{ float:left;list-style-type: none;} 
 
 /* Control Nav */
 .flex-control-nav {width: 100%; position: absolute;top:-40px;left:530px; text-align: center; z-index:99999;}
@@ -71,6 +71,7 @@ imgListUl.Img{height:306px;width:580px;}
 .flex-direction-nav a  { text-decoration:none; display: block; width: 40px; height: 48px; margin:25px 0 0; position: absolute; top: 50%; z-index: 10; overflow: hidden; cursor: pointer; color: rgba(255,255,255,.8);  background:url(../images/arr.png) no-repeat; text-indent:-999em }
 .flex-direction-nav .flex-prev { left:-25px; background-position:0 0 }
 .flex-direction-nav .flex-next { right:-36px; background-position:-132px 0}
+.flex-direction-nav li{list-style-type:none !important;}
 
 /*recruit*/
 #recruit{ position:relative;}
@@ -81,7 +82,7 @@ imgListUl.Img{height:306px;width:580px;}
 .recruit h2 .lfta.on{background:url(../images/recruit-pic01.png) no-repeat center center !important;}
 .recruit h2 .rgta{background:url(../images/recruit-pic021.png) no-repeat center center;}
 .recruit h2 .rgta.on{background:url(../images/recruit-pic02.png) no-repeat center center;}
-.recruit ul{ text-align:center;}
+.recruit ul{ text-align:center;padding-left:0;}
 .recruit-ul1 li{display:inline-block;width:383px;}
 .recruit ul.recruit-ul2 li, .recruit-ul1 li div{display:inline-block; width:349px; height:194px;background:url(../images/recruit-pic04.png) no-repeat center center; position:relative; margin:96px 17px 0; text-align:center;}
 .recruit ul.recruit-ul2 li img, .recruit-ul1 li div img{ position:absolute;top:-40px;left:140px;}
@@ -91,7 +92,7 @@ imgListUl.Img{height:306px;width:580px;}
 /*footer*/
 .footer > img{display:block; margin:95px auto 50px;}
 .footer > div ul{ float:left; width:620px; padding-top:44px;}
-.footer > div ul li{ background-color:#1d1e23; height:82px; }
+.footer > div ul li{ background-color:#1d1e23; height:82px;list-style-type:none; }
 .footer > div ul li *{color:#999999;}
 .footer > div ul li.scd{background-color:#1a1b20;}
 .footer > div ul li span{font:18px/82px "Microsoft YaHei"; display:inline-block; padding:0 95px;}
@@ -103,4 +104,7 @@ imgListUl.Img{height:306px;width:580px;}
 .ftr-btn{ width:100%; height:230px; background-color:#0f0f0f; text-align:center; margin-top:100px;}
 .ftr-btn img{ display:inline-block; padding:45px 0;}
 .ftr-btn p{ font-size:14px; color:#666666;}
+.first{font-size: 40px;font-family:'Microsoft YaHei';margin-top: 22.5%;padding: 10px;}
+.second{font-size: 40px;font-family:'Microsoft YaHei';margin-top: 23%;padding: 10px;}
+.third{font-size: 50px;font-family:'Microsoft YaHei';width:100%;margin:14.5% auto;padding: 20px;}
 
