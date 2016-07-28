@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js">
     </script>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/preloadjs-0.4.1.min.js"></script>
+    <script src="js/imageData.js"></script>
+    <script src="js/index.js"></script>
     <script async="" src="//www.google-analytics.com/analytics.js"></script>
     <script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"></script>
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
@@ -12,7 +16,7 @@
 
     <!--main content-->
     <link href="css/main.css" rel="stylesheet" type="text/css"/>
-    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+
     <!--<script type="text/javascript" src="http://libs.useso.com/js/flexslider/2.2.2/jquery.flexslider-min.js"></script>&lt;!&ndash;图片播放&ndash;&gt;-->
     <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
     <!--<link rel="stylesheet" type="text/css" href="http://libs.useso.com/js/flexslider/2.2.2/flexslider-min.css" media="all">&lt;!&ndash;图片播放&ndash;&gt;-->
@@ -31,7 +35,7 @@
     <meta content="https://ds-signatureart.com/" property="og:url">
     <meta content="Create your signature en maak kans op een avond tussen de sterren tijdens het Nederlands Film Festival 2015."
           property="og:description">
-    <title>YW | HRWebSite Art </title>
+    <title>阅沃实业</title>
 
     <meta content="#000000" name="theme-color">
 
@@ -86,6 +90,13 @@
 /*]]&gt;*/</script>
 <!-- End Google Tag Manager PSA_GTM_v2 -->
 
+<!--图片加载-->
+<img style="display: none;" id="yw_logo_img" alt="DS" src="images/yw_logo_img.jpg">
+<img style="display: none;" id="sa_logo_img" alt="DS" src="images/logo_sa_lijn.jpg">
+<img style="display: none;" id="sa_logo_gp_img" alt="DS" src="images/logo_sa_gp.jpg">
+<img style="display: none;" id="sa_logo_lt_img" alt="DS" src="images/logo_sa_last.jpg">
+<img style="display: none;" id="not_found_img" alt="DS" src="images/404.png">
+
 <!--第二帧内容页-->
 <div id="app">
     <!--第三帧文字加载。第四帧文字加载-->
@@ -96,15 +107,15 @@
 
             </div>
 
-            <div id="fisrtFade" style="text-align: center">
-                <div class="content-wrap first">
+            <div id="fisrtFade" style="text-align: center;">
+                <div class="content-wrap first" style="font-size: 40px;font-family:'Microsoft YaHei';margin-top:25%;padding: 10px;">
                     <span class="one">有能力,有信心,有决心</span><br/><br/><br/>
                     <span class="two">为投资者创造新价值</span>
                 </div>
             </div>
 
-            <div id="secondFade" style="text-align: center">
-                <div class="content-wrap second">
+            <div id="secondFade" style="text-align: center;">
+                <div class="content-wrap second" style="font-size: 40px;font-family:'Microsoft YaHei';margin-top:30%;padding: 10px;">
                     <span class="one">专业 专注的工作准则</span><br/><br/><br/>
                     <span class="two">合作 共赢的工作理念</span>
                 </div>
@@ -143,7 +154,7 @@
             <header>
                 <div class="header-inner">
                     <div class="logo" style="visibility: inherit; opacity: 1;">
-                        <a href="/"></a>
+                        <!--<a href="#"></a>-->
                     </div>
                     <div data-path="images/mute.json" id="mute-button">
                     </div>
@@ -354,20 +365,18 @@
             <img src="images/ftr-btn-pic01.png"/>
 
             <p>公司地址：上海市浦东新区商城路506号新梅联合广场写字楼B座32楼 联系电话：021-60171398</p>
+            <p>上海阅沃实业有限公司</p>
+            <p>Copyright@2016 沪ICP备16024570号-1</p>
         </div>
     </div>
 </div>
+
 <!--加载-->
 <div id="preloader">
     <div class="loader"></div>
     <div class="background"></div>
 </div>
-<!--图片加载-->
-<img style="display: none;" id="yw_logo_img" alt="DS" src="images/yw_logo_img.jpg">
-<img style="display: none;" id="sa_logo_img" alt="DS" src="images/logo_sa_lijn.jpg">
-<img style="display: none;" id="sa_logo_gp_img" alt="DS" src="images/logo_sa_gp.jpg">
-<img style="display: none;" id="sa_logo_lt_img" alt="DS" src="images/logo_sa_last.jpg">
-<img style="display: none;" id="not_found_img" alt="DS" src="images/404.png">
+
 <!--初始文字 确认显示的顺序-->
 <script type="text/template" id="tpl-intro">
     <section id="intro">
@@ -421,8 +430,8 @@
 </script>
 <!--内容页-->
 <script type="text/template" id="tpl-connect">
-    <div id="connect-signature" style="text-align: center">
-        <div class="content-wrap third" style="font-size: 47px;font-family:'Microsoft YaHei';width:100%;margin:14.5% auto;padding: 20px;">
+    <div id="connect-signature" style="text-align: center;position: relative">
+        <div class="content-wrap third" style="position:absolute;font-size: 35px;font-family:'Microsoft YaHei';width:100%;margin:14.5% auto;padding: 20px;">
             <span>自我提升，良性竞争，相互欣赏，相互支持</span><br/><br/><br/><br/><br/>
             <span>立足新起点，开创新局面</span>
         </div>
@@ -1059,7 +1068,8 @@
         "nodejs": {"port": 443, "hostname": "ds-signatureart.com"},
         "copy": {"twitterShareText": "#DsSignatureArt", "unknownCreator": "Anonymous", "signedLabel": "Signed by "},
         "device": "desktop"
-    };</script>
+    };
+</script>
 
 <div class="dg ac">
     <div class="dg main a" style="-moz-user-select: none; width: 245px; display: none;">

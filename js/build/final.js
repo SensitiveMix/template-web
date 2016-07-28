@@ -25533,7 +25533,28 @@ site.views.Page = Backbone.View.extend({
 });
 site.views.Preloader = Backbone.View.extend({
     initialize: function() {
-        site.events.on("Preloader:show", this.show, this), site.events.on("Preloader:hide", this.hide, this)
+        site.events.on("Preloader:show", this.show, this),
+            this.queue=new createjs.LoadQueue(true);
+        this.loadImage();
+            site.events.on("Preloader:hide", this.hide, this)
+    },
+    loadImage:function () {
+        var self=this;
+        self.queue.on('progress',function () {
+            var per=Math.ceil(self.queue.progress*100);
+            // self.$loading_p
+        });
+        self.queue.on('complete',function () {
+            $.each(PRELOAD_MANIFEST.manifest, function(i, n) {
+                var el = $('#' + n.id);
+                if(el.length > 0) {
+                    el.attr('src', n.src);
+                    console.log(el.attr('src'));
+                }
+            });
+            
+        });
+        self.queue.loadManifest(PRELOAD_MANIFEST)
     },
     show: function() {
         this.$el.fadeIn()
@@ -25582,7 +25603,11 @@ site.DefaultRouter = Backbone.Router.extend({
 !
     function() {
         var e = function() {
-                site.$bodyHTML = site.$("body,html"), site.$body = site.$("body"), n(), i(), t(), site.$window.on("resize", _.debounce(c, 200)), site.$window.trigger("resize"), TweenMax.ticker.addEventListener("tick", function() {
+                site.$bodyHTML = site.$("body,html"),
+                site.$body = site.$("body"), n(), i(), t(), 
+                site.$window.on("resize", _.debounce(c, 200)), 
+                site.$window.trigger("resize"), 
+                TweenMax.ticker.addEventListener("tick", function() {
                     site.events.trigger("tick")
                 }), site.events.trigger("jsReady")
             },
@@ -26488,7 +26513,7 @@ site.views.Intro = Backbone.View.extend({
     },
     render: function() {
         site.events.trigger("introStarted"),
-        this.videoTexture1 || (this.videoTexture1 = this.createVideoTexture(),
+        (this.videoTexture1 = this.createVideoTexture(),
         this.dsLogoPositions = this.createDSLogoPositions(),
         this.saLogoPositions = this.createSALogoPositions(),
         this.saGPLogoPositions = this.createGPLogoPositions(),
@@ -26518,7 +26543,10 @@ site.views.Intro = Backbone.View.extend({
         if (site.device.desktop) {
             console.log("video/intro.mp4")
             var t, i = document.createElement("video");
-            t = i.canPlayType("video/mp4") ? "video/intro.mp4" : "video/intro.mpm", i.src = t;
+            
+            
+            t = i.canPlayType("video/mp4") ? "video/intro1.mp4" : "video/intro.mpm",
+                i.src = t;
             var e;
             e = site.device.isIE11 ? new THREE.IEVideoTexture(i) : new THREE.VideoTexture(i)
         } else e = new THREE.MobileVideoTexture;
@@ -26530,8 +26558,12 @@ site.views.Intro = Backbone.View.extend({
     },
     createDSLogoPositions: function() {
         var t = document.getElementById("yw_logo_img"),
+            mm=document.createElement("img"),
 
             i = document.createElement("canvas");
+        mm.src="images/yw_logo_img.jpg";
+        console.log(t.src+'222');
+         // alert(t.src);
         if (i.width = t.naturalWidth, i.height = t.naturalHeight, !i.width || !i.height) return [];
         var e = i.getContext("2d");
         e.drawImage(t, 0, 0);
@@ -26583,6 +26615,7 @@ site.views.Intro = Backbone.View.extend({
     createLTLogoPositions: function() {
         var t = document.getElementById("sa_logo_lt_img"),
             i = document.createElement("canvas");
+
         if (i.width = t.naturalWidth, i.height = t.naturalHeight, !i.width || !i.height) return [];
         var e = i.getContext("2d");
         e.drawImage(t, 0, 0);
@@ -26670,7 +26703,6 @@ site.views.Intro = Backbone.View.extend({
         }, "ds_logo_in"),
             s.addCallback(function() {
                 //淡入logo **
-                console.log("//���ع�˾logo **")
             o.setDSLogoTransitionIn(),
                  
                 o.glView.dsParticles.rotation.y = .5 * Math.PI, o.glView.dsParticles.position.y = 100, "safari" == o.browser && (o.avgHigh = .3, o.avgLow = .3)
@@ -26821,7 +26853,7 @@ site.views.Intro = Backbone.View.extend({
             s.addCallback(function() {
             o.bmTitle5.play(),// 文字淡入淡出
                 $("#fisrtFade").show(100).fadeIn(1000),
-                $("#fisrtFade").hide().fadeOut(2500),
+                $("#fisrtFade").hide().fadeOut(2100),
                 o.$contentDivs[4].style.display = "block"
         }, "title_5"),
             s.fromTo(o.$contentDivs[4], .5, {
@@ -26846,7 +26878,7 @@ site.views.Intro = Backbone.View.extend({
             autoAlpha: 0
         }, "title_6+=4"),
             
-            //so_lijn_logo����
+
             s.add("sa_logo_in", "sa_particles_in+=6"),
             s.addCallback(function() {
                 o.setSALogoTransitionIn(),
@@ -26865,7 +26897,7 @@ site.views.Intro = Backbone.View.extend({
         }, "sa_logo_in"), s.add("title_nff", "sa_logo_in+=3"), s.addCallback(function() {
             o.bmTitle8.play(), // 文字淡入淡出
                 $("#secondFade").show(20).fadeIn(1000),
-                $("#secondFade").hide().fadeOut(2500),  o.$contentDivs[7].style.display = "block"
+                $("#secondFade").hide().fadeOut(2100),  o.$contentDivs[7].style.display = "block"
         }, "title_nff"), s.fromTo(o.$contentDivs[7], 2, {
             autoAlpha: 1
         }, {

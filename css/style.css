@@ -2832,7 +2832,7 @@ dd p {
     }
 
     #preloader .loader {
-        background-image: url("https://ds-signatureart.com/images/preloader_ds.gif");
+        background-image: url("../images/loading.gif");
         width: 125px;
         height: 150px;
         background-size: 125px;
@@ -3015,7 +3015,8 @@ dd p {
     header .logo a {
         display: block;
         width: inherit;
-        height: inherit
+        height: inherit;
+        position: absolute;
     }
 
     header #mute-button {
@@ -3739,7 +3740,7 @@ dd p {
     }
 }
 
-    /*ÊÖ»ú¶Ë*/
+    /*ï¿½Ö»ï¿½ï¿½ï¿½*/
     @media only screen and (orientation: landscape) {
         #tpl-mobileconnect #sign-signature {
             margin-top: -40px
