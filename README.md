@@ -1,8 +1,8 @@
 ## template-website
 
-- [](three.js)
-- [](backbone.js)
-- [](webGL)
+[](three.js)
+[](backbone.js)
+[](webGL)
 
 
 ## GET START
